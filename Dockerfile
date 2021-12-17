@@ -1,5 +1,7 @@
 FROM debian:bullseye-slim
 
+ARG GIT_BRANCH_OR_TAG=main
+
 RUN mkdir /output /output/config /output/extension /output/extension/7.4 /output/extension/8.0
 RUN set -ex && \
     apt-get -q update && \
@@ -12,6 +14,7 @@ RUN set -ex && \
     apt-get -qy install php7.4-dev php8.0-dev && \
     git clone https://github.com/newrelic/newrelic-php-agent /tmp/newrelic-php-agent-repo && \
     cd /tmp/newrelic-php-agent-repo && \
+    git checkout ${GIT_BRANCH_OR_TAG} && \
     cp agent/scripts/newrelic.ini.template /output/config/ && \
         make clean && \
             update-alternatives --set php /usr/bin/php7.4 && \
