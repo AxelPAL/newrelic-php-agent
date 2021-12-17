@@ -14,7 +14,7 @@ RUN set -ex && \
     apt-get -qy install php7.4-dev php8.0-dev && \
     git clone https://github.com/newrelic/newrelic-php-agent /tmp/newrelic-php-agent-repo && \
     cd /tmp/newrelic-php-agent-repo && \
-    git checkout ${GIT_BRANCH_OR_TAG} && \
+    git checkout ${GIT_BRANCH_OR_TAG} || git checkout main && \
     cp agent/scripts/newrelic.ini.template /output/config/ && \
         make clean && \
             update-alternatives --set php /usr/bin/php7.4 && \
