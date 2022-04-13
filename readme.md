@@ -6,7 +6,7 @@ It is based on https://github.com/newrelic/newrelic-php-agent and inside this im
 * Compiled php-extension for AMD64, ARM64, ARMv7 architectures for next versions of PHP:
   * 7.4
   * 8.0
-  * 8.1 (not yet ready by NewRelic)
+  * 8.1
 * bin folder that contains compiled version of NewRelic's:
   * daemon
   * client
@@ -26,6 +26,8 @@ Full hierarchy of output folder of this image (/output):
   * 7.4
     * newrelic.so
   * 8.0
+    * newrelic.so
+  * 8.1
     * newrelic.so
 
 ## Usage
