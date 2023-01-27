@@ -3,7 +3,7 @@
 This image is used for multi-stage build of your dockerized app.
 It is based on https://github.com/newrelic/newrelic-php-agent and inside this image you can find next things:
 
-* Compiled php-extension for AMD64, ARM64, ARMv7 architectures for next versions of PHP:
+* Compiled php-extension for AMD64, ARM64 architectures for next versions of PHP:
   * 7.4
   * 8.0
   * 8.1
