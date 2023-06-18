@@ -7,6 +7,7 @@ It is based on https://github.com/newrelic/newrelic-php-agent and inside this im
   * 7.4
   * 8.0
   * 8.1
+  * 8.2
 * bin folder that contains compiled version of NewRelic's:
   * daemon
   * client
@@ -29,6 +30,8 @@ Full hierarchy of output folder of this image (/output):
     * newrelic.so
   * 8.1
     * newrelic.so
+  * 8.2
+    * newrelic.so
 
 ## Usage
 
@@ -46,5 +49,6 @@ In Debian/Ubuntu by default it is:
 * `/usr/lib/php/20190902` for PHP 7.4
 * `/usr/lib/php/20200930` for PHP 8.0
 * `/usr/lib/php/20210902` for PHP 8.1
+* `/usr/lib/php/20220829` for PHP 8.2
 
 You also should grab NewRelic's template for php extension and fill it out (config/newrelic.ini.template). After that you should use it inside your container with your app to configure NewRelic's php extension.

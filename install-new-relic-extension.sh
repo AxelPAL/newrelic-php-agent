@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for VERSION in "7.4" "8.0" "8.1" 
+for VERSION in "7.4" "8.0" "8.1"  "8.2"
 do
     mkdir /output/extension/$VERSION
     apt-get -qy install php$VERSION-dev
